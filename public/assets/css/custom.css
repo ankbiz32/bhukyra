@@ -1,0 +1,176 @@
+/* Green #415B34 */
+/* L Yellow #EAC71D */
+/* D Yellow #DA9C18 */
+/* Text black #343434 */
+
+.bg-green{
+    background-color: #415B34 !important;
+}
+.text-yellow{
+    color: #EAC71D !important;
+}
+
+.is-invalid{
+    border: 1px solid #d00000 !important;
+}
+label.error{
+    color: #d00000;
+}
+.quicky-btn{
+    display: inline-block;
+    margin-top: 8px !important;
+    font-size: 14px !important;
+    background-color: #415B34 !important;
+    padding: 0.6rem 1rem !important;
+    border-radius: 6px;
+    height: auto !important;
+    line-height: 20px !important;
+    border:none !important;
+    color: #EAC71D !important;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.45);
+    transition: 0.2s;
+}
+.quicky-btn:hover{
+    background-color: #415B34 !important;
+    transform: translateY(-2%);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
+}
+.quicky-btn:active{
+    transform: translateY(0%);
+    box-shadow: 0px 4px 15px rgba(0,0,0,0);
+}
+
+.quicky-btn-outline{
+    display: inline-block;
+    margin-top: 8px !important;
+    font-size: 14px !important;
+    border: 1px solid #415B34 ;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    color: #343434 !important;
+    text-transform: uppercase;
+    /* box-shadow: 0px 4px 15px rgba(0,0,0,0.45); */
+    transition: 0.2s;
+}
+.offcanvas-inner_logo a img, .header-logo_area a img{
+    height: 55px;
+}
+.legacy .short-desc{
+    font-size:18px !important;
+    line-height:25px !important;
+    color:#ddd;
+}
+@media (max-width: 767px) {
+    .offcanvas-inner_logo a img, .header-logo_area a img{
+        height: 45px;
+    }
+    .quicky-cart-area {
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+    .cart--items .table {
+        display: block;
+        background: none;
+        border: none;
+    }
+    .cart--items .table *{
+        font-size: 14px;
+    }
+    .cart--items .table thead, .cart--items .table .product-subtotal {
+        display: none;
+    }
+
+    .cart--items .table tbody {
+        display: block;
+    }
+
+    .cart--items .table tbody tr {
+        display: block;
+        background-color: #fff;
+    }
+
+    .cart--items .table tbody tr + tr {
+        margin-top: 30px;
+    }
+
+    .cart--items .table tbody tr td {
+        display: block;
+        position: relative;
+        padding: 10px 0;
+        padding-left: 160px;
+        text-align: right;
+        overflow: hidden;
+        border: none;
+    }
+    .cart--items .table tbody tr td.quicky-product-thumbnail, .cart--items .table tbody tr td.quicky-product-name{
+        padding-left:0; text-align: center;
+    }
+
+    .quicky-cart-area .table-content table td:nth-child(3) {
+        padding: 10px 10px;
+    }
+    .cart--items .table tbody tr td.quicky-product-price{
+        width: 100%;
+    }
+
+    .cart--items .table tbody tr td:after {
+        content: attr( data-label );
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        font-size: 14px;
+        margin-top: -14px;
+        color: #222;
+        font-family: "Montserrat", sans-serif;
+        line-height: 26px;
+    }
+   
+    .cart--items .table tbody tr td.quicky-product-remove{
+        padding:0;
+
+    }
+    .cart--items .table tbody tr td.quicky-product-remove a{
+        background-color: #f3f3f3;
+        padding:10px 0 10px;
+        border-bottom-left-radius:8px ;
+        border-bottom-right-radius:8px ;
+
+    }
+}
+
+@media (max-width: 479px) {
+    .offcanvas-inner_logo a img, .header-logo_area a img{
+        height: 40px;
+    }
+    .offcanvas-inner_logo{
+        padding: 15px 0 !important;
+    }
+    .header-right_area ul li a i{
+        font-size: 20px !important;
+    }
+    .minicart-count_area .badge{
+        font-size: 10px !important;
+    }
+    .quicky-btn{
+        font-size: 12px !important;
+    }
+
+    .about-us p{
+        font-size: 16px !important;
+    }
+
+    .about-us .legacy .banner-area{
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+    .legacy .short-desc{
+        font-size:16px !important;
+        line-height:25px !important;
+    }
+    .why_us .text-area p{
+        line-height:25px !important;
+    }
+
+}
