@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
         session_start();
         // unset($_SESSION);
-        if ( !isset($_SESSION['country_iso_code']) || !isset($_SESSION['currency_code']) || !isset($_SESSION['curr']) || !isset($_SESSION['locale_code'])) 
+        // if ( !isset($_SESSION['country_iso_code']) || !isset($_SESSION['currency_code']) || !isset($_SESSION['curr']) || !isset($_SESSION['locale_code'])) 
         // {
         //     $__iso=geoip($request->ip())->iso_code; //For dynamic ip address
         //     // $__iso = geoip('192.206.151.131')->iso_code;
