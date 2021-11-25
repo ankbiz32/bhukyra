@@ -51,7 +51,7 @@ class AppServiceProvider extends ServiceProvider
                 }
             }
             else{
-                $__available = Country::where('country_iso_code', $__iso)->first();
+                $__this = Country::where('country_iso_code', $__iso)->first();
                 $_SESSION['country_iso_code']='IN';
                 $_SESSION['currency_code']=$__this->currency.' ';
                 $_SESSION['curr']=$__this->currency_symbol.' ';
