@@ -30,37 +30,37 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
         session_start();
         // unset($_SESSION);
-        if ( !isset($_SESSION['country_iso_code']) || !isset($_SESSION['currency_code']) || !isset($_SESSION['curr']) || !isset($_SESSION['locale_code'])) 
-        {
-            $__iso=geoip($request->ip())->iso_code; //For dynamic ip address
-            // $__iso = geoip('192.206.151.131')->iso_code;
-            $__available = Country::where('country_iso_code', $__iso)->first();
-            if($__available){
-                if(count($__available->products)){
-                    $_SESSION['country_iso_code']=$__iso;
-                    $_SESSION['currency_code']=$__available->currency.' ';
-                    $_SESSION['curr']=$__available->currency_symbol.' ';
-                    $_SESSION['locale_code']=$__available->locale_code.' ';
-                }
-                else{
-                    $__this = Country::where('country_iso_code', 'IN')->first();
-                    $_SESSION['country_iso_code']='IN';
-                    $_SESSION['currency_code']=$__this->currency.' ';
-                    $_SESSION['curr']=$__this->currency_symbol.' ';
-                    $_SESSION['locale_code']=$__this->locale_code.' ';
-                }
-            }
-            else{
-                $__this = Country::where('country_iso_code', 'IN')->first();
-                $_SESSION['country_iso_code']='IN';
-                $_SESSION['currency_code']=$__this->currency.' ';
-                $_SESSION['curr']=$__this->currency_symbol.' ';
-                $_SESSION['locale_code']=$__this->locale_code.' ';
-            }
-        }
-        view()->composer(['layouts.app'],function ($view){
-            $view->with('categories', \App\Category::where('parent_id', '=', 0)->where('country_iso_code', $_SESSION['country_iso_code'])->get());
-        });
+        // if ( !isset($_SESSION['country_iso_code']) || !isset($_SESSION['currency_code']) || !isset($_SESSION['curr']) || !isset($_SESSION['locale_code'])) 
+        // {
+        //     $__iso=geoip($request->ip())->iso_code; //For dynamic ip address
+        //     // $__iso = geoip('192.206.151.131')->iso_code;
+        //     $__available = Country::where('country_iso_code', $__iso)->first();
+        //     if($__available){
+        //         if(count($__available->products)){
+        //             $_SESSION['country_iso_code']=$__iso;
+        //             $_SESSION['currency_code']=$__available->currency.' ';
+        //             $_SESSION['curr']=$__available->currency_symbol.' ';
+        //             $_SESSION['locale_code']=$__available->locale_code.' ';
+        //         }
+        //         else{
+        //             $__this = Country::where('country_iso_code', 'IN')->first();
+        //             $_SESSION['country_iso_code']='IN';
+        //             $_SESSION['currency_code']=$__this->currency.' ';
+        //             $_SESSION['curr']=$__this->currency_symbol.' ';
+        //             $_SESSION['locale_code']=$__this->locale_code.' ';
+        //         }
+        //     }
+        //     else{
+        //         $__this = Country::where('country_iso_code', 'IN')->first();
+        //         $_SESSION['country_iso_code']='IN';
+        //         $_SESSION['currency_code']=$__this->currency.' ';
+        //         $_SESSION['curr']=$__this->currency_symbol.' ';
+        //         $_SESSION['locale_code']=$__this->locale_code.' ';
+        //     }
+        // }
+        // view()->composer(['layouts.app'],function ($view){
+        //     $view->with('categories', \App\Category::where('parent_id', '=', 0)->where('country_iso_code', $_SESSION['country_iso_code'])->get());
+        // });
     }
 }
 
